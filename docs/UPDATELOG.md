@@ -17,3 +17,4 @@
 - GitHub Actions에서 린트와 단위 테스트를 통과한 뒤 GitHub Pages로 자동 배포되도록 설정했습니다.
 - 배포 주소: https://wbmaker2.github.io/waveworks/
 - main 브랜치에 푸시할 때마다 같은 과정으로 다시 배포됩니다.
+- 배포 워크플로가 최신 GitHub Actions 버전을 사용하도록 정리했습니다.
