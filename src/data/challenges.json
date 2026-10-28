@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "challenges": [
+    {
+      "id": "pitch-octave",
+      "titleKo": "한 옥타브 위의 A",
+      "concept": "pitch",
+      "promptKo": "A4(440 Hz)보다 정확히 한 옥타브 높은 A5를 만들어 보세요.",
+      "prediction": {
+        "questionKo": "같은 파형에서 주파수를 2배로 하면 음높이는 어떻게 될까요?",
+        "optionsKo": ["한 옥타브 높아진다", "두 옥타브 높아진다", "변하지 않는다"],
+        "correctIndex": 0
+      },
+      "target": { "frequency": 880 },
+      "tolerance": 25,
+      "targetSummaryKo": "A5 · 880 Hz",
+      "explanationKo": "440 Hz의 2배는 880 Hz입니다. 주파수가 2배가 되면 같은 음이름으로 한 옥타브 위가 됩니다.",
+      "takeawayKo": "주파수가 2배가 되면 음은 한 옥타브 높아집니다.",
+      "difficulty": 1
+    },
+    {
+      "id": "wave-bright",
+      "titleKo": "밝은 파형 찾기",
+      "concept": "waveform",
+      "promptKo": "배음이 많아 더 밝게 들리는 파형을 220 Hz에서 골라 보세요.",
+      "prediction": {
+        "questionKo": "사인파와 사각파 중 배음이 더 많은 쪽은 어느 것일까요?",
+        "optionsKo": ["사인파", "사각파", "둘 다 같다"],
+        "correctIndex": 1
+      },
+      "target": { "waveform": "square", "frequency": 220 },
+      "tolerance": 25,
+      "targetSummaryKo": "사각파 · A3(220 Hz)",
+      "explanationKo": "사각파에는 기본음의 홀수 배음이 많이 들어 있습니다. 사인파에는 기본음만 있어 훨씬 부드럽게 들립니다.",
+      "takeawayKo": "배음이 많을수록 음색이 밝고 복잡해집니다.",
+      "difficulty": 1
+    },
+    {
+      "id": "harmonics-warm",
+      "titleKo": "따뜻한 음색 설계",
+      "concept": "harmonics",
+      "promptKo": "220 Hz 기본음 위에 2·3·4배음을 더해 '따뜻하게' 프리셋과 같은 스펙트럼을 만드세요.",
+      "prediction": {
+        "questionKo": "기본음 위에 높은 배음을 더하면 음색은 어떻게 변할까요?",
+        "optionsKo": ["더 밝고 복잡해진다", "음높이가 올라간다", "아무 변화가 없다"],
+        "correctIndex": 0
+      },
+      "target": { "fundamental": 220, "harmonics": [1, 0.5, 0.3, 0.15] },
+      "tolerance": 0.06,
+      "targetSummaryKo": "220 Hz · 배음 100 / 50 / 30 / 15%",
+      "explanationKo": "배음의 비율을 바꾸면 같은 음높이라도 파형의 모양이 달라집니다. 그래서 피아노와 바이올린이 같은 음을 내도 다르게 들립니다.",
+      "takeawayKo": "배음의 비율이 악기마다 다른 음색을 만듭니다.",
+      "difficulty": 2
+    },
+    {
+      "id": "chord-c-major",
+      "titleKo": "C 메이저 화음 조립",
+      "concept": "chord",
+      "promptKo": "C4를 근음으로 하는 메이저 화음을 만드세요.",
+      "prediction": {
+        "questionKo": "메이저 화음의 반음 간격은 어떻게 될까요?",
+        "optionsKo": ["0 · 4 · 7 반음", "0 · 3 · 7 반음", "0 · 5 · 7 반음"],
+        "correctIndex": 0
+      },
+      "target": { "chord": { "rootMidi": 60, "quality": "major" } },
+      "targetSummaryKo": "C4 · 메이저 (0·4·7 반음)",
+      "explanationKo": "C4에서 4반음 위는 E4, 7반음 위는 G4입니다. C4–E4–G4를 동시에 울리면 C 메이저 화음이 됩니다.",
+      "takeawayKo": "메이저는 0·4·7, 마이너는 0·3·7 반음으로 화음을 쌓습니다.",
+      "difficulty": 2
+    },
+    {
+      "id": "rhythm-eighth",
+      "titleKo": "8분음표 리듬 완성",
+      "concept": "rhythm",
+      "promptKo": "1·3·5·7칸에 C4, C4, E4, G4를 놓고 120 BPM으로 맞추세요.",
+      "prediction": {
+        "questionKo": "BPM 숫자가 커지면 같은 리듬은 어떻게 될까요?",
+        "optionsKo": ["느려진다", "빨라진다", "박자가 사라진다"],
+        "correctIndex": 1
+      },
+      "target": {
+        "pattern": [60, null, 60, null, 64, null, 67, null],
+        "bpm": 120
+      },
+      "tolerance": 2,
+      "targetSummaryKo": "1·3·5·7칸 · C4 C4 E4 G4 · 120 BPM",
+      "explanationKo": "BPM은 1분 동안의 박자 수입니다. 120 BPM에서는 4분음표 한 박이 0.5초이고, 8분음표 한 칸은 0.25초입니다.",
+      "takeawayKo": "BPM과 칸의 길이를 알면 리듬을 숫자로 설계할 수 있습니다.",
+      "difficulty": 3
+    }
+  ]
+}

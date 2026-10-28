@@ -1,0 +1,8 @@
+node_modules
+dist
+dev-dist
+.playwright-mcp
+test-results
+playwright-report
+package-lock.json
+IMPLEMENTATION_PLAN.md
